@@ -3,21 +3,36 @@
     <head>
         <meta charset="utf-8" />
         <title></title>
+		
     </head>
     <body>
         <ul class="list">
 			<li>
-				<input data-filter="" name="tree" id="oak" value="oak">
+				<input data-filter="false" name="tree" id="oak" value="oak">
 				<label for="oak">Oak</label>
 			</li>
 			<li>
-				<input data-filter="" name="tree" id="burch" value="burch">
+				<input data-filter="false" name="tree" id="burch" value="burch">
 				<label for="burch">Burch</label>
 			</li>
 			<li>
-				<input data-filter="" name="tree" id="willow" value="willow">
+				<input data-filter="false" name="tree" id="willow" value="willow">
 				<label for="willow">Willow</label>
 			</li>
+		</ul>
+        <ul class="list">
+			<li>
+				<input data-filter="false" name="type" id="evergreen" value="evergreen">
+				<label for="evergreen">Evergreen</label>
+			</li>
+			<li>
+				<input data-filter="false" name="type" id="seasonal" value="seasonal">
+				<label for="seasonal">Seasonal</label>
+			</li>
+		</ul>		
+		<div class="boxes oak evergreen visible"></div>
+		<div class="boxes burch seasonal visible"></div>
+		<div class="boxes willow seasonal visible"></div>
 		<script src="../../jquery-1.12.4.min.js"></script>
         <script src="conf-ideas.js"></script>
     </body>
