@@ -3,36 +3,123 @@
     <head>
         <meta charset="utf-8" />
         <title></title>
-		
+		<style type="text/css" media="screen">
+			ul,
+			li {
+				display: inline-block;
+			}
+			h4, h5 {
+				margin: 0 0 10px 0;
+			}
+			.car {
+				width: 600px;
+				border: 5px solid lightblue;
+				margin: 5px;
+				padding: 10px;
+				display: none;
+			}
+			.active {
+				display: inline-block;
+			}
+			.jeep h4,
+			.ford h4,
+			.audi h4 {
+				border-left-color: black;
+				border-left-width: 5px;
+				padding-left: 5px;
+			}
+
+			.jeep h4 {
+				border-left-style: solid;
+			}
+			.ford h4 {
+				border-left-style: dotted;
+			}
+			.audi h4 {
+				border-left-style: double;
+			}
+			.green h5 {color: green;}
+			.blue h5 {color: blue;}
+		</style>
     </head>
     <body>
-        <ul class="list">
-			<li>
-				<input data-filter="false" name="tree" id="oak" value="oak">
-				<label for="oak">Oak</label>
-			</li>
-			<li>
-				<input data-filter="false" name="tree" id="burch" value="burch">
-				<label for="burch">Burch</label>
-			</li>
-			<li>
-				<input data-filter="false" name="tree" id="willow" value="willow">
-				<label for="willow">Willow</label>
-			</li>
-		</ul>
-        <ul class="list">
-			<li>
-				<input data-filter="false" name="type" id="evergreen" value="evergreen">
-				<label for="evergreen">Evergreen</label>
-			</li>
-			<li>
-				<input data-filter="false" name="type" id="seasonal" value="seasonal">
-				<label for="seasonal">Seasonal</label>
-			</li>
-		</ul>		
-		<div class="boxes oak evergreen visible"></div>
-		<div class="boxes burch seasonal visible"></div>
-		<div class="boxes willow seasonal visible"></div>
+        <div class="list-wrap">
+        	<ul class="list" data-attribute="type">
+            	<li>
+    				<input type="radio" data-filter="false" name="type" id="clear-type" value="clear-type" checked="checked">
+    				<label for="clear-type">Clear type</label>
+    			</li>
+    			<li>
+    				<input type="radio" data-filter="false" name="type" id="ford" value="ford">
+    				<label for="ford">Ford</label>
+    			</li>
+    			<li>
+    				<input type="radio" data-filter="false" name="type" id="jeep" value="Jeep">
+    				<label for="Jeep">Jeep</label>
+    			</li>
+    			<li>
+    				<input type="radio" data-filter="false" name="type" id="audi" value="Audi">
+    				<label for="Audi">Audi</label>
+    			</li>
+    		</ul>
+            <ul class="list" data-attribute="color">
+            	<li>
+    				<input type="radio" data-filter="false" name="color" id="clear-color" value="clear-color" checked="checked">
+    				<label for="clear-color">Clear Color</label>
+    			</li>
+    			<li>
+    				<input type="radio" data-filter="false" name="color" id="blue" value="blue">
+    				<label for="blue">Blue</label>
+    			</li>
+    			<li>
+    				<input type="radio" data-filter="false" name="color" id="green" value="green">
+    				<label for="green">Green</label>
+    			</li>
+    		</ul>
+        </div>
+
+		<div class="results">
+			<div class="car active ford green">
+				<h4>Type: Ford</h4>
+				<h5>Color: Green</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active ford blue">
+				<h4>Type: Ford</h4>
+				<h5>Color: Blue</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active ford blue">
+				<h4>Type: Ford</h4>
+				<h5>Color: Blue</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active audi green">
+				<h4>Type: Audi</h4>
+				<h5>Color: Green</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active audi blue">
+				<h4>Type: Audi</h4>
+				<h5>Color: Blue</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active jeep blue">
+				<h4>Type: Jeep</h4>
+				<h5>Color: Blue</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active jeep green">
+				<h4>Type: Jeep</h4>
+				<h5>Color: Green</h5>
+				<p>Lorem.</p>
+			</div>
+			<div class="car active jeep blue">
+				<h4>Type: Jeep</h4>
+				<h5>Color: Blue</h5>
+				<p>Lorem.</p>
+			</div>
+		</div>
 		<script src="../../jquery-1.12.4.min.js"></script>
         <script src="conf-ideas.js"></script>
     </body>
