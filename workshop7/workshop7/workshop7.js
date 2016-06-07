@@ -4,22 +4,34 @@ var ProductLister = (function () {
     var init,
         callAjax,
         jsonToHTML,
-        addHTMLToDom
+        addHTMLToDom,
+		attr,
+		api,
 		filters = document.getElementById('filters'),
 		productsList = document.getElementById('products-list');
 
     // The "init" function, sets up event handlers
-    init = function (d) {
-		d.addEventListener("click", function(){
-			
-		}
+    init = function () {
+		filters.addEventListener("click", function(event) {
+			callAjax(event)
+		});
     };
 
     // Function to run when a category button is clicked
     // Handler is assigned to parent, so we use event delegation!
     callAjax = function (event) {
-
         event.preventDefault();
+		console.log(event.target.getAttribute("data-category"));
+		//attr = event.("data-category");
+		
+		api = $.ajax({
+			url: "http://gerardluskin.com/city/service/products/?callback=&category=" + attr,
+			dataType: "jsonp"
+		}).done(function (data, text, api) {
+			console.log("worked");
+		}).fail(function (api, text, err) {
+			console.log("Failed");
+		});
 
     };
 
