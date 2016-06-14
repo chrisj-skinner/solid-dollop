@@ -1,0 +1,17 @@
+// Change 5 colours on a website based on a list containing 3 different 5 colour combinations themes.
+// assign a class to the body tag
+
+// assign data-attribute to the swatch of colours
+
+// onClick get the data-attribute and assign it to the body tag - also store it in localStorage.
+// on page load - check to see if data-attribute exists in localStorage and if so assign it to the body tag 
+
+-----
+
+// API call to get colour swatches and storage in Obj
+// On click assign designated theme colours to the site.
+
+// Setup a default array containing the colours currently first in use when the sote loads.
+
+// in use when the page loads and store this in localStorage
+// Refer to localStorage when the page url changes
