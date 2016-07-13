@@ -3,14 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>Workshop 8</title>
-        <link href="../assets//bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
-        <style type="text/css"> 
-        .loading {
-            background: url(../assets/ajax-loader.gif) no-repeat center center;
-        }
-        .loading .gm-style {
-            display: none;
-        }
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" rel="stylesheet" type="text/css" />
+        <style type="text/css">
         .align-right {
             margin-left: 10px; 
             float: right;
@@ -18,14 +12,18 @@
         </style>
     </head>
     <body>
-
-
         <div class="container">
 
             <div class="page-header">
-                <h1>Workshop 8 - Local Storage</h1>
+                <h1>Local Storage Demo</h1>
             </div>
-            
+            <p>Form fields are stored in Local Storage with an onclick keyup.</p>
+            <ul>
+                <li>Inspect local storage in developer tools to see this happen in real-time.</li>
+                <li>Refreshing the browser clears the form but preserves local storage</li>
+                <li><strong>Restore</strong> - populates the form again from local storage data (if any).</li>
+                <li><strong>Clear</strong> - removes ALL local storage.</li>
+            </ul>
             <form id="adduser">
                 <div class="form-group">
                     <label for="input-name">Name</label>
@@ -36,14 +34,11 @@
                     <input name="userEmail" type="text" class="form-control" id="input-email">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary" id="add-button">Add user</button>
-                    
-                    <button class="btn btn-primary align-right" id="clear-button">Clear my local storage!</button>
-                    
-                    <button class="btn btn-primary align-right" id="restore-button">Restore previous session</button>
+                    <button class="btn btn-primary align-right" id="clear-button">Clear (BEWARE - I'll clear ALL your localstorage!)</button>
+                    <button class="btn btn-primary align-right" id="restore-button">Restore</button>
                 </div>
             </form>
         </div>
-        <script src="form-recall.js"></script>
+        <script src="script.js"></script>
     </body>
 </html>
